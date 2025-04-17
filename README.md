@@ -110,7 +110,7 @@ GET http://localhost:8000/api/products?category=electronics
 
 GET http://localhost:8000/api/products/statistics
 
-##API Endpoints
+## API Endpoints
 
 
 
