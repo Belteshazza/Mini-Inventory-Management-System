@@ -2,8 +2,7 @@
 
 This is a Laravel-based API for a Mini Inventory Management System, implementing user authentication, multi-tenancy, and inventory management features as per the provided technical task.
 
-Project Structure
-
+**Project Structure**
 
 app/Models/: Contains User, Product, and Category models.
 
@@ -17,7 +16,7 @@ routes/api.php: API routes for authentication, products, and categories.
 
 README.md: Instructions for setup and running the project.
 
-Implementation Details
+**Implementation Details**
 
 Authentication: Uses JWT for user registration and login.
 
