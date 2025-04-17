@@ -36,7 +36,7 @@ Security: Routes are protected with auth:api middleware.
 
  ## Setup Instructions
  **Clone the Repository**:
-   ```bash
+  
    git clone <repository-url>
    cd inventorymanagement
 
