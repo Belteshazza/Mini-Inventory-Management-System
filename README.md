@@ -110,9 +110,9 @@ GET http://localhost:8000/api/products?category=electronics
 
 GET http://localhost:8000/api/products/statistics
 
-API Endpoints
+##API Endpoints
 
-Auth User:
+**Auth User:**
 
 
 POST /api/register - Register a new user
@@ -127,7 +127,7 @@ POST /api/logout - Logout (requires token)
 
 
 
-Products:
+**Products:**
 
 
 GET /api/products - List products (supports ?category, ?quantity, ?price_min, ?price_max)
@@ -151,7 +151,7 @@ DELETE /api/products/{id} - Delete a product
 
 
 
-Categories:
+**Categories:**
 
 
 GET /api/categories - List categories
@@ -171,6 +171,7 @@ PUT /api/categories/{id} - Update a category
 
 
 DELETE /api/categories/{id} - Delete a category
+
 
 7. ## Swagger Documentation
 - Use this postman link for the api documentation as all the documentation can be found here 
