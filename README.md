@@ -183,6 +183,6 @@ PUT /api/categories/{id} - Update a category
 DELETE /api/categories/{id} - Delete a category
 
 
-7. ## Swagger Documentation
+7. ## Postman API Documentation
 - Use this postman link for the api documentation as all the documentation can be found here 
 https://documenter.getpostman.com/view/15373925/2sB2cd3xWx
