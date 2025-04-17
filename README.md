@@ -5,22 +5,28 @@ A Laravel-based REST API for managing inventory with user authentication and mul
 ## Requirements
 - PHP >= 8.3
 - Composer
-- laaravel 11
+- laaravel >= 11
 - MySQL or any supported database
-- 
+- RESTful JSON API
+
+ ## Setup Instructions
+ **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd inventorymanagement
 
 # Initial Set Up
 
-1. Create .env file by running; create .env.example file manually if not found
-
-```
-cp .env.example .env
-```
-
-2. Install dependencies
+1. Install dependencies
 
 ```
 composer install
+```
+
+2. Create .env file by running; create .env.example file manually if not found
+
+```
+cp .env.example .env
 ```
 
 3. Update .env with your database details
