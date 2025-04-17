@@ -125,6 +125,10 @@ POST /api/login - Login and get JWT token
 
 
 
+POST /api/user - Get the user detail 
+
+
+
 POST /api/logout - Logout (requires token)
 
 
