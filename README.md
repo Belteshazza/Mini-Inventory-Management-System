@@ -3,36 +3,52 @@
 A Laravel-based REST API for managing inventory with user authentication and multi-tenancy.
 
 ## Requirements
-- PHP >= 8.1
+- PHP >= 8.3
 - Composer
+- laaravel 11
 - MySQL or any supported database
-- Node.js (optional for Swagger)
+- 
 
-## Setup Instructions
-1. **Clone the Repository**:
-   ```bash
-   git clone <repository-url>
-   cd inventory-management-api
+# Initial Set Up
 
-2. **Install Dependencies**
+1. Create .env file by running; create .env.example file manually if not found
 
-composer instal
-
-3. **Configure Environment**
-
-Copy .env.example to .env:
-
+```
 cp .env.example .env
+```
+
+2. Install dependencies
+
+```
+composer install
+```
+
+3. Update .env with your database details
+
+```
+DB_DATABASE=YOUR_DATABASE_NAME
+DB_USERNAME=YOUR_DATABASE_USERNAME
+DB_PASSWORD=YOUR_DATABASE_PASSWORD
+```
+
+4. Generate laravel application key
+
+```
+php artisan key:generate
+```
 
 
 Update .env with your database credentials and run:
 
-php artisan key:generate
+```
 php artisan jwt:secret
+```
 
 4. **Run Migrations**
 
-5.**php artisan migrate**
+```
+php artisan migrate
+```
 
 Serve the Application:
 
@@ -103,9 +119,6 @@ DELETE /api/products/{id} - Delete a product
 
 
 
-GET /api/products/statistics - Get inventory statistics
-
-
 
 Categories:
 
@@ -129,5 +142,5 @@ PUT /api/categories/{id} - Update a category
 DELETE /api/categories/{id} - Delete a category
 
 7. ## Swagger Documentation
-- use this postman link for the api documentation 
+- Use this postman link for the api documentation as all the documentation can be found here 
 https://documenter.getpostman.com/view/15373925/2sB2cd3xWx
