@@ -112,6 +112,8 @@ GET http://localhost:8000/api/products/statistics
 
 ##API Endpoints
 
+
+
 **Auth User:**
 
 
@@ -124,6 +126,8 @@ POST /api/login - Login and get JWT token
 
 
 POST /api/logout - Logout (requires token)
+
+
 
 
 
@@ -147,6 +151,8 @@ PUT /api/products/{id} - Update a product
 
 
 DELETE /api/products/{id} - Delete a product
+
+
 
 
 
