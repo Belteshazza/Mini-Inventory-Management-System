@@ -14,7 +14,7 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::middleware('auth:api')->group(function() {
     Route::get('/user', [UserController::class, 'user']);
     Route::post('/logout', [AuthController::class, 'logout']);
+    Route::get('/products/statistics', [ProductController::class, 'statistics']);
     Route::apiResource('products', ProductController::class);
-    Route::get('products/statistics', [ProductController::class, 'statistics']);
     Route::apiResource('categories', CategoryController::class);
 });

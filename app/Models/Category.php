@@ -9,13 +9,13 @@ class Category extends Model
 {
     protected $fillable = ['name', 'slug', 'user_id'];
 
-    protected static function boot()
-    {
-        parent::boot();
-        static::creating(function ($category) {
-            $category->slug = Str::slug($category->name);
-        });
-    }
+    // protected static function boot()
+    // {
+    //     parent::boot();
+    //     static::creating(function ($category) {
+    //         $category->slug = Str::slug($category->name);
+    //     });
+    // }
 
     public function products()
     {
