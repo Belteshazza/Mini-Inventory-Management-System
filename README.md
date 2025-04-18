@@ -157,6 +157,9 @@ PUT /api/products/{id} - Update a product
 DELETE /api/products/{id} - Delete a product
 
 
+GET	/api/products/statistics	-Get product statistics
+
+
 
 
 
