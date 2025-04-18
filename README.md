@@ -1,38 +1,85 @@
 # Mini Inventory Management System API
 
-A Laravel-based REST API for managing inventory with user authentication and multi-tenancy.
+This is a Laravel-based API for a Mini Inventory Management System, implementing user authentication, multi-tenancy, and inventory management features as per the provided technical task.
+
+**Project Structure**
+
+app/Models/: Contains User, Product, and Category models.
+
+app/Http/Controllers/: Includes AuthController, ProductController, and CategoryController.
+
+database/migrations/: Database schema for users, products, and categories.
+
+routes/api.php: API routes for authentication, products, and categories.
+
+
+
+README.md: Instructions for setup and running the project.
+
+**Implementation Details**
+
+Authentication: Uses JWT for user registration and login.
+
+Multi-Tenancy: Each user's products and categories are scoped by user_id.
+
+Features: CRUD for products and categories, filtering by category/quantity/price, and a statistics endpoint.
+
+Security: Routes are protected with auth:api middleware.
+
 
 ## Requirements
-- PHP >= 8.1
+- PHP >= 8.3
 - Composer
+- laaravel >= 11
 - MySQL or any supported database
-- Node.js (optional for Swagger)
+- RESTful JSON API
 
-## Setup Instructions
-1. **Clone the Repository**:
-   ```bash
+ ## Setup Instructions
+ **Clone the Repository**:
+  
    git clone <repository-url>
-   cd inventory-management-api
+   cd inventorymanagement
 
-2. **Install Dependencies**
+# Initial Set Up
 
-composer instal
+1. Install dependencies
 
-3. **Configure Environment**
+```
+composer install
+```
 
-Copy .env.example to .env:
+2. Create .env file by running; create .env.example file manually if not found
 
+```
 cp .env.example .env
+```
+
+3. Update .env with your database details
+
+```
+DB_DATABASE=YOUR_DATABASE_NAME
+DB_USERNAME=YOUR_DATABASE_USERNAME
+DB_PASSWORD=YOUR_DATABASE_PASSWORD
+```
+
+4. Generate laravel application key
+
+```
+php artisan key:generate
+```
 
 
 Update .env with your database credentials and run:
 
-php artisan key:generate
+```
 php artisan jwt:secret
+```
 
 4. **Run Migrations**
 
-5.**php artisan migrate**
+```
+php artisan migrate
+```
 
 Serve the Application:
 
@@ -63,9 +110,11 @@ GET http://localhost:8000/api/products?category=electronics
 
 GET http://localhost:8000/api/products/statistics
 
-API Endpoints
+## API Endpoints
 
-Auth User:
+
+
+**Auth User:**
 
 
 POST /api/register - Register a new user
@@ -76,11 +125,17 @@ POST /api/login - Login and get JWT token
 
 
 
+POST /api/user - Get the user detail 
+
+
+
 POST /api/logout - Logout (requires token)
 
 
 
-Products:
+
+
+**Products:**
 
 
 GET /api/products - List products (supports ?category, ?quantity, ?price_min, ?price_max)
@@ -103,11 +158,10 @@ DELETE /api/products/{id} - Delete a product
 
 
 
-GET /api/products/statistics - Get inventory statistics
 
 
 
-Categories:
+**Categories:**
 
 
 GET /api/categories - List categories
@@ -128,6 +182,7 @@ PUT /api/categories/{id} - Update a category
 
 DELETE /api/categories/{id} - Delete a category
 
-7. ## Swagger Documentation
-- use this postman link for the api documentation 
+
+7. ## Postman API Documentation
+- Use this postman link for the api documentation as all the documentation can be found here 
 https://documenter.getpostman.com/view/15373925/2sB2cd3xWx
